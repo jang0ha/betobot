@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>BETOBOT</title>
+
+    <!-- 제이쿼리-ui css  -->
+    <link rel="stylesheet" href="/resources/lib/jquery-ui/jquery-ui.min.css">
+    <!-- 커스텀 스크롤 바 css  -->
+    <link rel="stylesheet" href="/resources/lib/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <!-- 스와이퍼 css  -->
+    <link rel="stylesheet" href="/resources/lib/swiper/css/swiper-bundle.min.css">
+    <!-- aos scss -->
+    <link rel="stylesheet" href="/resources/lib/aos/aos.css">
+    <!-- 부트스트랩 css -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.css">
+    <!-- 스타일 css -->
+    <link rel="stylesheet" href="/resources/css/style.css">
+
+
+
+    <!-- 제이쿼리 js -->
+    <script src="/resources/js/jquery/jquery.min.js"></script>
+    <script src="/resources/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- gsap -->
+    <script src="/resources/lib/gsap/gsap.min.js"></script>
+</head>
+
+<style>
+    #wrap {
+        width: 625px;
+        height: 350px;
+        background-color: black;
+        position: relative;
+        margin-top: 250px;
+    }
+
+    .line {
+        width: 530px;
+        height: 265px;
+        background-color: transparent;
+        border-radius: 8px;
+        border: 3px solid #ff7510;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .robot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #ff7510;
+        position: absolute;
+        top: -5%;
+        left: 0;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div class="line">
+            <div class="robot"></div>
+        </div>
+
+    </div>
+    <div class="m-5">
+        <div class="mb-3 p-2 border d-inline"><button type="button" id="play"> 재생 </button></div>
+        <div class="mb-3 p-2 border d-inline"><button type="button" id="pause"> 정지 </button></div>
+        <input type="text" value="" placeholder="left(%)" id="leftVal">
+        <input type="text" value="" placeholder="top(%)" id="topVal">
+        <button type="button" onclick="moveRobot()"> 이동 </button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // 자동으로 돔
+            var tl_1 = new TimelineLite({
+                repeat: -1,
+                onUpdate: updateValue
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: 98 + '%'
+            })
+            tl_1.to('.robot', 2, {
+                ease: Power0.easeNone,
+                top: 96 + '%'
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: -2.3 + '%'
+            })
+            tl_1.to('.robot', 2, {
+                ease: Power0.easeNone,
+                top: -5 + '%'
+            })
+
+            // 재생
+            var animationPlay = $('#play');
+            animationPlay.on('click', function () {
+                tl_1.play();
+            })
+            // 정지
+            var animationPause = $('#pause');
+            animationPause.on('click', function () {
+                tl_1.pause();
+            })
+
+        })
+
+        // 정지 상태에만 가능
+        function moveRobot(){
+            var left = $("#leftVal").val();
+            var top = $("#topVal").val();
+            console.log(left);
+            console.log(top);
+            $('.robot').css({
+                'left': left + '%',
+                'top':top + '%',
+                'transition': '0.5s'
+            })
+        }
+        function updateValue(){
+
+        }
+    </script>
+    
+
+</body>
+
+</html>

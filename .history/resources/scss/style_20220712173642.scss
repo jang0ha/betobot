@@ -1,0 +1,153 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    margin:0;padding:0; width:100%; height:100%;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background:#282828;
+    color:#fff;
+
+    scrollbar-face-color: transparent;
+	scrollbar-track-color: transparent;
+	scrollbar-arrow-color: #fff;
+	scrollbar-3dlight-color: none;
+	scrollbar-shadow-color: #fff;
+	scrollbar-darkshadow-color: none;
+    scrollbar-color: #fff transparent;
+    scrollbar-width: auto;
+}
+::-webkit-scrollbar{
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track{
+	border-radius: 0;
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background-color: #fff;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{text-decoration: none; display: block; color:#fff;}
+
+.container{
+    width: calc(100% - 80px);
+    padding:0 40px;
+}
+
+
+// 이미지
+[class^=icon-]{display: inline-block;vertical-align: middle;background-repeat: no-repeat;background-position: 50% 50%; background-size: contain;}
+[class^=icon-front-]{width:50px; height:50px;}
+[class^=icon-info-]{width:34px; height:34px;}
+[class^=icon-menu-]{width:40px; height:40px;}
+
+.icon-front-camera{background-image: url('../images/icon-front-camera.svg');}
+.icon-front-temper{background-image: url('../images/icon-front-temper.svg');}
+.icon-front-wave{background-image: url('../images/icon-front-wave.svg');}
+.icon-front-fire{background-image: url('../images/icon-front-fire.svg');}
+
+.icon-info-temper{background-image: url('../images/icon-info-temper.png');}
+.icon-info-humidity{background-image: url('../images/icon-info-humidity.png');}
+.icon-info-o2{background-image: url('../images/icon-info-o2.png');}
+.icon-info-co2{background-image: url('../images/icon-info-co2.png');}
+.icon-info-no2{background-image: url('../images/icon-info-no2.png');}
+.icon-info-co{background-image: url('../images/icon-info-co.png');}
+.icon-info-h2s{background-image: url('../images/icon-info-h2s.png');}
+
+.icon-menu-robot{background-image: url('../images/icon-menu-robot.svg');}
+.icon-menu-preset{background-image: url('../images/icon-menu-preset.svg');}
+.icon-menu-handwork{background-image: url('../images/icon-menu-handwork.svg');}
+.icon-menu-schedule{background-image: url('../images/icon-menu-schedule.svg');}
+.icon-menu-etc{background-image: url('../images/icon-menu-etc.svg');}
+
+
+// 헤더
+#header-block{
+    padding:35px 0 5px 0;
+    .logo-wrap{
+        display: flex;
+        align-items: flex-start;
+        .logo{
+            width: 176px;
+            margin-right: 16px;
+        }
+    }
+}
+
+// 컨텐트 
+#content{
+    padding:40px 0;
+}
+
+// 공통 시작
+.row-wrap{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.card{
+    border-radius: 8px;
+    border: solid 1px #393939;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+// 공통 끝
+
+.left-container{
+    flex:0 0 1200px;
+}
+.right-container{
+    flex:0 0 auto;
+}
+.front-list-wrap{
+    position: relative;
+    width: 100%;
+    height: 675px;
+    .front-btn-wrap{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+    ul{
+        display: flex;
+        gap: 4px;
+        li{
+            flex:0 0 100px;
+            a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding:10px 0 13px 0;
+                background-color: #2e2e2e40;
+                border-radius: 8px;
+                p{
+                    margin-top: 4px;
+                }
+                &.active{
+                    background-color: #ff7510;
+                }
+            }
+        }
+    }
+}

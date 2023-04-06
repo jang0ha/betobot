@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> -->
+    <meta name="format-detection" content="telephone=no">
+    <title>BETOBOT</title>
+
+    <!-- 스타일 css -->
+    <link rel="stylesheet" href="/resources/css/style.css">
+
+
+
+    <!-- 제이쿼리 js -->
+    <script src="/resources/js/jquery/jquery.min.js"></script>
+    <script src="/resources/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- gsap -->
+    <script src="/resources/lib/gsap/gsap.min.js"></script>
+</head>
+<body id="main">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header-block">
+            <header>
+                <div class="container">
+                    <div class="header-wrap">
+                        <a href="#none" class="logo-wrap">
+                            <img src="../../resources/images/icon-logo.png" alt="BETOBOT 로고 이미지" class="logo">
+                            <img src="../../resources/images/icon-camera.svg" alt="로고 카메라 이미지" class="logo-camera">
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- 컨텐츠 -->
+        <div id="content-block">
+            <main id="content" role="main">
+                <div class="container">
+                    <div class="row-wrap">
+                        <!-- 왼쪽 시작-->
+                        <div class="left-container">
+                            <div class="title">Front Door A-12</div>
+                            <div class="row-wrap">
+                                <div class="front-list-wrap card" style="background-image:url('../../resources/images/@sample-front-img.png')">
+                                    <div class="front-btn-wrap">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;"  class="active">
+                                                    <i class="icon-front-camera"></i>
+                                                    <p>실화상</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" >
+                                                    <i class="icon-front-temper"></i>
+                                                    <p>열화상</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-front-wave"></i>
+                                                    <p>초음파</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="icon-front-fire"></i>
+                                                    <p>화재감시</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="front-date-wrap">
+                                        2022-07-07 00:28:09
+                                    </div>
+                                </div>
+
+                                <div class="row-wrap">
+                                    <div class="robot-information-wrap card">
+                                        <ul>
+                                            <li>
+                                                <span class="index">로봇상태</span>
+                                                <span class="index-information">전진</span>
+                                            </li>
+                                            <li>
+                                                <span class="index">로봇 내부온도/습도</span>
+                                                <span class="index-information">0m</span>
+                                            </li>
+                                            <li>
+                                                <span class="index">배터리 용량</span>
+                                                <span class="index-information">99.9%</span>
+                                            </li>
+                                            <li>
+                                                <span class="index">로봇위치 팬/ 틸트/ 줌</span>
+                                                <span class="index-information">765.28m/ 0.0 / 0.0</span>
+                                            </li>
+                                            <li>
+                                                <span class="index">초음파(dB)</span>
+                                                <span class="index-information">22.0db</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sensor-information-wrap card">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-info-temper"></i>
+                                                <strong>316.0</strong>
+                                                <small>000℃</small>
+                                                <p class="name">열화상 온도</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-humidity"></i>
+                                                <strong>532</strong>
+                                                <small>000%</small>
+                                                <p class="name">습도</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-o2"></i>
+                                                <strong>203.0</strong>
+                                                <small>000%</small>
+                                                <p class="name">산소</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-co2"></i>
+                                                <strong>4.0</strong>
+                                                <small>000%</small>
+                                                <p class="name">이산화탄소</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-no2"></i>
+                                                <strong>4.0</strong>
+                                                <small>000ppm</small>
+                                                <p class="name">이산화질소</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-co"></i>
+                                                <strong>0.0</strong>
+                                                <small>000ppm</small>
+                                                <p class="name">일산화탄소</p>
+                                            </li>
+                                            <li>
+                                                <i class="icon-info-h2s"></i>
+                                                <strong>0.0</strong>
+                                                <small>000ppm</small>
+                                                <p class="name">황화수소</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 왼쪽 끝 -->
+
+                        <!-- 오른쪽 시작  -->
+                        <div class="right-container">
+                            <div class="title">Watch list</div>
+                            <div class="row-wrap">
+                                <div class="watch-list-wrap card">
+                                    <ul>
+                                        <li><a href="javascript:;" ><div><span>Front Door A-12</span><i class="icon-arrow-right"></i></div></a></li>
+                                        <li><a href="javascript:;" ><div><span>지하공동구 1구역 1번</span><i class="icon-arrow-right"></i></div></a></li>
+                                        <li><a href="javascript:;" class="active"><div><span>Front Door A-12</span><i class="icon-arrow-right"></i></div></a></li>
+                                        <li><a href="javascript:;" ><div><span>지하공동구 1구역 1번</span><i class="icon-arrow-right"></i></div></a></li>
+                                        <li><a href="javascript:;" ><div><span>후문 304 A-10</span><i class="icon-arrow-right"></i></div></a></li>
+                                        <li><a href="javascript:;" ><div><span>후문 304 A-10</span><i class="icon-arrow-right"></i></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="watch-list-btn-wrap card">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" >
+                                                <i class="icon-menu-robot"></i>
+                                                <p>로봇 설정</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="active">
+                                                <i class="icon-menu-preset"></i>
+                                                <p>프리셋 설정</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" >
+                                                <i class="icon-menu-handwork"></i>
+                                                <p>수동 조정</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" >
+                                                <i class="icon-menu-schedule"></i>
+                                                <p>스케줄 설정</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" >
+                                                <i class="icon-menu-etc"></i>
+                                                <p>기타 설정</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="watch-map card" style="background-image: url('../../resources/images/@floor-plan.png');">
+                                    <div class="line">
+                                        <div class="robot"></div>
+                                    </div>
+                                </div>
+                                <!-- <div class="m-5">
+                                    <div class="mb-3 p-2 border d-inline"><button type="button" id="play"> 재생 </button></div>
+                                    <div class="mb-3 p-2 border d-inline"><button type="button" id="pause"> 정지 </button></div>
+                                    <input type="text" value="" placeholder="left(%)" id="leftVal">
+                                    <input type="text" value="" placeholder="top(%)" id="topVal">
+                                    <button type="button" onclick="moveRobot()"> 이동 </button>
+                                </div>
+                             -->
+                            </div>
+                        </div>
+                        <!-- 오른쪽 끝 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- 팝업  수동 조절 시작 -->
+    <div class="popup show">
+        <div class="popup-content">
+            <div class="popup-header">Remote control</div>
+            <div class="popup-body">
+                <div class="remote-direction">
+                    <button type="button" class="remote-btn">
+                        <i class="icon-remote-backup"></i>
+                        <p>후진</p>
+                    </button>
+                </div>
+            </div>
+            <div class="close-btn">
+                <i class="icon-popup-close"></i>
+            </div>
+        </div>
+       
+    </div>
+    <!-- 팝업  수동 조절 끝 -->
+
+    <script>
+     $(document).ready(function () {
+             // 자동으로 돔
+             var tl_1 = new TimelineLite({
+                repeat: -1,
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: 98 + '%'
+            })
+            tl_1.to('.robot', 2, {
+                ease: Power0.easeNone,
+                top: 96 + '%'
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: -2.3 + '%'
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: 98 + '%'
+            })
+            tl_1.to('.robot', 2, {
+                ease: Power0.easeNone,
+                top: -5 + '%'
+            })
+            tl_1.to('.robot', 3, {
+                ease: Power0.easeNone,
+                left: -2.3 + '%'
+            })
+            // 재생
+            var animationPlay = $('#play');
+            animationPlay.on('click', function () {
+                tl_1.play();
+            })
+            // 정지
+            var animationPause = $('#pause');
+            animationPause.on('click', function () {
+                tl_1.pause();
+            })
+
+
+        })
+
+        // 버튼 효과
+        $(".watch-list-wrap li a").on("click", function(){
+            $(".watch-list-wrap li a").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $(".watch-list-btn-wrap li a").on("click", function(){
+            $(".watch-list-btn-wrap li a").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $(".front-btn-wrap li a").on("click", function(){
+            $(".front-btn-wrap li a").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+</body>
+
+</html>

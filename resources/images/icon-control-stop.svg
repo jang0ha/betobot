@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <filter id="타원_19" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.129" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-control-stop" transform="translate(-895 -664)">
+    <g data-type="innerShadowGroup">
+      <circle id="타원_19-2" data-name="타원 19" cx="35" cy="35" r="35" transform="translate(895 664)" fill="#fff" opacity="0.756"/>
+      <g transform="matrix(1, 0, 0, 1, 895, 664)" filter="url(#타원_19)">
+        <circle id="타원_19-3" data-name="타원 19" cx="35" cy="35" r="35" fill="#fff" opacity="0.756"/>
+      </g>
+    </g>
+    <rect id="사각형_128" data-name="사각형 128" width="14" height="14" transform="translate(923 692)" fill="#ff7510"/>
+  </g>
+</svg>

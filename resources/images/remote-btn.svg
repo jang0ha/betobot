@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="332" height="40" viewBox="0 0 332 40">
+  <defs>
+    <filter id="remote-btn" x="0" y="0" width="332" height="40" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#fff" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <rect id="remote-btn-2" data-name="remote-btn" width="332" height="40" rx="4" fill="#f7f7f7"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#remote-btn)">
+      <rect id="remote-btn-3" data-name="remote-btn" width="332" height="40" rx="4" fill="#fff"/>
+    </g>
+  </g>
+</svg>

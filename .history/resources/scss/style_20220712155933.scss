@@ -1,0 +1,40 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    margin:0;padding:0; width:100%; height:100%;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background:#282828;
+    color:#fff;
+}
+
+#wrap{
+
+}
+
+.container{
+    width: calc(100% - 80px);
+    padding:0 40px;
+}
+
+// 헤더
+header{
+    padding:35px 0 5px 0;
+    .logo-wrap{
+        display: flex;
+        align-items: flex-start;
+        .logo{
+            width: 176px;
+            margin-right: 16px;
+        }
+    }
+}
+
+// 컨텐트 
+#content{
+    padding:40px 0;
+}

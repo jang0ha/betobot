@@ -1,0 +1,244 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    margin:0;padding:0; width:100%; height:100%;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background:#282828;
+    color:#fff;
+
+    scrollbar-face-color: transparent;
+	scrollbar-track-color: transparent;
+	scrollbar-arrow-color: #fff;
+	scrollbar-3dlight-color: none;
+	scrollbar-shadow-color: #fff;
+	scrollbar-darkshadow-color: none;
+    scrollbar-color: #fff transparent;
+    scrollbar-width: auto;
+}
+::-webkit-scrollbar{
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track{
+	border-radius: 0;
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background-color: #fff;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{text-decoration: none; display: block; color:#fff;}
+
+.container{
+    width: calc(100% - 80px);
+    padding:0 40px;
+}
+
+
+// 이미지
+[class^=icon-]{display: inline-block;vertical-align: middle;background-repeat: no-repeat;background-position: 50% 50%; background-size: contain;}
+[class^=icon-front-]{width:50px; height:50px;}
+[class^=icon-info-]{width:34px; height:34px;}
+[class^=icon-menu-]{width:40px; height:40px;}
+
+.icon-front-camera{background-image: url('../images/icon-front-camera.svg');}
+.icon-front-temper{background-image: url('../images/icon-front-temper.svg');}
+.icon-front-wave{background-image: url('../images/icon-front-wave.svg');}
+.icon-front-fire{background-image: url('../images/icon-front-fire.svg');}
+
+.icon-info-temper{background-image: url('../images/icon-info-temper.png');}
+.icon-info-humidity{background-image: url('../images/icon-info-humidity.png');}
+.icon-info-o2{background-image: url('../images/icon-info-o2.png');}
+.icon-info-co2{background-image: url('../images/icon-info-co2.png');}
+.icon-info-no2{background-image: url('../images/icon-info-no2.png');}
+.icon-info-co{background-image: url('../images/icon-info-co.png');}
+.icon-info-h2s{background-image: url('../images/icon-info-h2s.png');}
+
+.icon-menu-robot{background-image: url('../images/icon-menu-robot.svg');}
+.icon-menu-preset{background-image: url('../images/icon-menu-preset.svg');}
+.icon-menu-handwork{background-image: url('../images/icon-menu-handwork.svg');}
+.icon-menu-schedule{background-image: url('../images/icon-menu-schedule.svg');}
+.icon-menu-etc{background-image: url('../images/icon-menu-etc.svg');}
+
+.icon-arrow-right{background-image: url('../images/icon-arrow-right.svg'); width: 26px; height: 26px;}
+
+
+// 헤더
+#header-block{
+    padding:35px 0 5px 0;
+    .logo-wrap{
+        display: flex;
+        align-items: flex-start;
+        .logo{
+            width: 176px;
+            margin-right: 16px;
+        }
+    }
+}
+
+// 컨텐트 
+#content{
+    padding:40px 0;
+}
+
+// 공통 시작
+.row-wrap{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.card{
+    border-radius: 8px;
+    border: solid 1px #393939;
+    background-color: #2e2e2e;
+    width: 100%;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+// 공통 끝
+
+.left-container{
+    flex:0 0 1200px;
+}
+.right-container{
+    flex:1 0 0%;
+    flex-direction: column;
+
+}
+
+.front-list-wrap{
+    position: relative;
+    width: 100%;
+    height: 675px;
+    .front-btn-wrap{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+    .front-date-wrap{
+        position: absolute;
+        right: 23px;
+        bottom: 28px;
+        font-size: 18px;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4px;
+        li{
+            width: 100px;
+            height:100px;
+            a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding:10px 0 13px 0;
+                background-color: #2e2e2e40;
+                border-radius: 8px;
+                p{
+                    margin-top: 4px;
+                }
+                &.active{
+                    background-color: #ff7510;
+                }
+            }
+        }
+    }
+}
+
+.robot-information-wrap{
+    flex: 0 0 350px;
+    width: 350px;
+    padding: 30px 25px 33px 25px;
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .index{
+            color: #868686;
+        }
+     
+        & + li{
+            margin-top: 12px;
+        }
+    }
+}
+
+.sensor-information-wrap{
+    flex: 1 0 0%;
+    padding:34px 27px;
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            strong{
+                font-size: 28px;
+                font-weight: bold;
+                color: #ff7510;
+                margin-top: 3px;
+            }
+            small{
+                margin-top: 4px;
+                font-size: 14px;
+                color: #868686;
+            }
+            .name{
+                font-size: 16px;
+                font-weight: 500;
+                color: #d6d6d6;
+                margin-top: 24px;
+            }
+        }
+    } 
+}
+
+.watch-list-wrap{
+    padding-top: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+    height: 397px;
+    ul{
+        li{
+            a{
+                div{
+                    border-bottom:1px solid #393939;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
